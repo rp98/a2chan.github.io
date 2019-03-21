@@ -20,13 +20,26 @@
 
 <body>
 
-  <div id='fallingLetters'>
-    <main id="main"></main>
-
-    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/61811/web-animations-next-2.2.0.min.js'></script>
+  <!-- Autotype begins -->
+<div id='autotype' >
+    <div class="type-js headline">
+      <h1 class="text-js">Pepper.</h1> 
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script  src="js/index.js"></script>
-  </div>
+</div>
+ <!-- Autotype ends -->
+
+   <!-- Falling letters begin -->
+   <div id='fallingLetters'>
+      <main id="main"></main>
   
+      <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/61811/web-animations-next-2.2.0.min.js'></script>
+      <script  src="js/index.js"></script>
+    </div>
+  <!-- Falling letters end -->
+
+ <!--Inkpot begins  -->
   <div id='inkpot'>
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-30 -470 612 1600">
         <defs>
@@ -40,12 +53,16 @@
         <use xlink:href="#a" fill-opacity="0" stroke="#000" class="v1"/>
       </svg>
     </div>
+<!-- Inkport ends -->
 
+<!-- fading function -->
     <script>
         setTimeout(function(){
           $("#inkpot").fadeOut(2500);
         }, 2000);
+        
     </script>
+
 </body>
 
 </html>

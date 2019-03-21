@@ -1,12 +1,80 @@
+/* autotype */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+.text-js {
+  opacity: 0;
+}
+
+.cursor {
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: white;
+  z-index: 1;
+  -webkit-animation: flash 0.5s none infinite alternate;
+          animation: flash 0.5s none infinite alternate;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#autotype {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+#autotype {
+  background: linear-gradient(135deg, #00C4FF, #9D1BB2);
+  height: 100vh;
+  width:100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*  */
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+.headline {
+  margin: 20px;
+  color: white;
+  font-size: 64px;
+  text-align: center;
+}
+.headline h1 {
+  letter-spacing: 1.6px;
+  font-weight: 300;
+  z-index: 10;;
+}
+
+
 /* inkpot */
 svg {
   top:0;
   left:0;
   height: 100vh;
   width: 100vw;
-  /* display: block; */
   position: fixed;
-  /* z-index:100; */
   background-color: #000;
  }
  
@@ -36,10 +104,12 @@ svg {
    from { fill-opacity: 0; }
    to { fill-opacity: 1; }
  }
+
+
 /* fallingLetters */
 #fallingLetters {
   height: 50vh;
-  background: rgb(0,0,0,0);
+  background: rgba(0,0,0,0);
   overflow: hidden;
   display: flex;
   align-items: stretch;
@@ -49,7 +119,6 @@ svg {
   font-family: monospace;
   font-size: 5vh;
   position: relative;
-  /* z-index:10; */
 }
 
 main {
@@ -66,35 +135,6 @@ main p {
   padding: 0 2rem;
   max-width: 30rem;
   line-height: 1.4;
-}
-
-header,
-footer {
-  height: 5vh;
-  line-height: 5vh;
-  font-size: 3vh;
-  background: #aa6657;
-  text-align: right;
-  text-transform: uppercase;
-  padding: 0 2.5vh;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-}
-footer ul {
-  display: flex;
-  flex-direction: row-reverse;
-}
-footer ul .misses {
-  padding: .5vh;
-  transition: all .225s ease-out;
-}
-footer ul .misses.missed {
-  opacity: .4;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 main > div {
@@ -135,6 +175,7 @@ main > div > span {
 main > div > span b {
   display: block;
   padding: 2.5vh;
+  z-index: 0;
   transition: opacity .25s linear;
 }
 
@@ -151,41 +192,4 @@ main > div > span b {
             transform: translate3d(6vw, 0, 0);
   }
 }
-#game-over {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .75s ease-out;
-  background: rgba(0, 0, 0, 0.75);
-  position: absolute;
-  top: 5vh;
-  right: 0;
-  bottom: 5vh;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-transform: uppercase;
-}
-#game-over.indeed {
-  opacity: 1;
-  pointer-events: auto;
-}
 
-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border-radius: 0;
-  border: 0.3rem solid #eee;
-  color: #eee;
-  font-size: 3vh;
-  padding: 1.5vh 2vh;
-  background: transparent;
-  margin-top: 5vh;
-  font-family: monospace;
-}
-button:hover {
-  border-color: #aa6657;
-}
