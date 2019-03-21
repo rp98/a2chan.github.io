@@ -1,0 +1,147 @@
+$light: #eee;
+$dark: #252627;
+$bar: #aa6657;
+
+body {
+  height: 100vh;
+  background: $dark;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  color: $light;
+  font-family: -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: monospace;
+  font-size: 5vh;
+  position: relative;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  p {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 5vh;
+    padding: 0 2rem;
+    max-width: 30rem;
+    line-height: 1.4;
+  }
+}
+header,
+footer {
+  height: 5vh;
+  line-height: 5vh;
+  font-size: 3vh;
+  background: $bar;
+  text-align: right;
+  text-transform: uppercase;
+  padding: 0 2.5vh;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    flex-direction: row-reverse;
+    
+    .misses {
+      padding: .5vh;
+      transition: all .225s ease-out;
+      &.missed {
+        opacity: .4;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+main > div {
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  text-transform: uppercase;
+  perspective: 300px;
+  transition: opacity .7s ease-in;
+  font-size: 5vh;
+  
+  &.popped {
+    opacity: 0;
+    > span {
+      b {
+        opacity: 0;
+      }
+      animation-play-state: paused;
+    }
+  }
+  &.missed {
+    opacity: 0;
+    > span {
+      //  transform: scaleY(0);
+      animation-play-state: paused;
+    }
+  }
+  
+  > span {
+    position: absolute;
+    display: block;
+    animation: waver 2s infinite alternate ease-in-out;
+    perspective: 300px;
+    b {
+      display: block;
+      padding: 2.5vh;
+      transition: opacity .25s linear;
+    }
+  }
+}
+
+@keyframes waver {
+  100% {
+    transform: translate3d(6vw, 0, 0);
+  }
+}
+
+
+#game-over {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .75s ease-out;
+  background: rgba(0,0,0,.75);
+  
+  position: absolute;
+  top: 5vh;
+  right: 0;
+  bottom: 5vh;
+  left: 0;
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  text-transform: uppercase;
+  
+  &.indeed {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+button {
+  appearance: none;
+  border-radius: 0;
+  border: .3rem solid $light;
+  color: $light;
+  font-size: 3vh;
+  padding: 1.5vh 2vh;
+  background: transparent;
+  margin-top: 5vh;
+  font-family: monospace;
+  
+  &:hover {
+    border-color: $bar;
+  }
+}
