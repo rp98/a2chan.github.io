@@ -39,7 +39,7 @@ svg {
 /* fallingLetters */
 #fallingLetters {
   height: 50vh;
-  background: #252627;
+  background: rgb(0,0,0,0);
   overflow: hidden;
   display: flex;
   align-items: stretch;
