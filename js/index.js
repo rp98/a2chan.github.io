@@ -67,7 +67,7 @@ function playGame(replay) {
 
   //Periodically remove missed elements, and lower the interval between falling elements
   var cleanupInterval = setInterval(function() {
-    timeOffset = timeOffset * 4 / 5;
+    // timeOffset = timeOffset * 4 / 5;
     cleanup();
   }, 20000);
   function cleanup() {
