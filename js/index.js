@@ -8,10 +8,6 @@ sleep(2000).then(() => {
   polyfillKey(); 
 });
 
-// playGame();
-// polyfillKey(); 
-
-
 function playGame(replay) {
   var LETTERS = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','இ'];
   var animations = {'a':[],'b':[],'c':[],'d':[],'e':[],'f':[],'g':[],'h':[],'i':[],'j':[],'k':[],'l':[],'m':[],'n':[],'o':[],'p':[],'q':[],'r':[],'s':[],'t':[],'u':[],'v':[],'w':[],'x':[],'y':[],'z':[],'இ':[]};
@@ -34,7 +30,7 @@ function playGame(replay) {
     for(let i = 0; i < 6; i++) {
       color += colorGen[Math.floor(Math.random()*len)];
     }
-    // color= "#FFFFFF";
+    color= "#162449";
     return color;
   }
 

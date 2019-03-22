@@ -44,7 +44,7 @@
 
 #autotype {
   /* background: linear-gradient(135deg, #00C4FF, #9D1BB2); */
-  background: linear-gradient(90deg, #f9d016, #162449);
+  background: linear-gradient(135deg, #bea41b,#f3d423,#cfb41d);
   height: 100vh;
   width:100vw;
   display: flex;
@@ -58,7 +58,7 @@
 .headline {
   margin: 20px;
   color: white;
-  font-size: 64px;
+  font-size: 80px;
   text-align: center;
 }
 .headline h1 {
@@ -108,7 +108,7 @@ svg {
 
 /* fallingLetters */
 #fallingLetters {
-  height: 50vh;
+  height: 100vh;
   background: rgba(0,0,0,0);
   overflow: hidden;
   display: flex;
