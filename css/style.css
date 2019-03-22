@@ -43,14 +43,14 @@
 }
 
 #autotype {
-  background: linear-gradient(135deg, #00C4FF, #9D1BB2);
+  /* background: linear-gradient(135deg, #00C4FF, #9D1BB2); */
+  background: linear-gradient(90deg, #f9d016, #162449);
   height: 100vh;
   width:100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  /*  */
-  position:fixed;
+  position:absolute;
   top:0;
   left:0;
 }
@@ -79,7 +79,7 @@ svg {
  }
  
  path {
-   stroke: white;
+   stroke: #F7D696;
    stroke-width: 4;
  }
  
@@ -87,7 +87,7 @@ svg {
    stroke-dasharray: 700 150;
    stroke-dashoffset: 2700;
    fill: url("#MyGradient");
-   animation-name: draw;
+   animation-name: draw, fill;
    animation-duration: 6s;
    animation-timing-function: ease-in-out;
    animation-direction:alternate;
@@ -119,6 +119,8 @@ svg {
   font-family: monospace;
   font-size: 5vh;
   position: relative;
+  top:0;
+  left:0;
 }
 
 main {
