@@ -4,6 +4,10 @@
   opacity: 0;
 }
 
+*{
+  font-family: "Open Sans", sans-serif;
+}
+
 .cursor {
   display: block;
   position: absolute;
@@ -60,7 +64,7 @@
   color: white;
   font-size: 80px;
   text-align: center;
-  margin-bottom: 5%;
+  margin-bottom: 9.5%;
 }
 .headline h1 {
   letter-spacing: 1.6px;
@@ -111,7 +115,7 @@ svg {
 
 /* fallingLetters */
 #fallingLetters {
-  height: 43vh;
+  height: 38vh;
   background: rgba(0,0,0,0);
   overflow: hidden;
   display: flex;
@@ -350,6 +354,64 @@ a:hover{
 
 a img{
 	border:none;
+}
+
+/* Get started button */
+button {
+  display:block;
+  height: auto;
+  width: 150px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #383736;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+  position: absolute;
+  top: 50vh;
+  left: 45vw;
+}
+
+.fill:hover {
+  color: whitesmoke;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 0.09s ease-in;
+}
+
+.fill:hover:before {
+  top: 0;
+}
+
+.fade:before{
+  content:"→";
+  position:absolute;
+  color:#383736;
+  left: 88%;
+  opacity: 0;
+  transition: all 0.2s ease-in;
 }
 
 
