@@ -193,7 +193,7 @@ $(document).ready(function(){
   // Now to start autoTyping just call the autoType function with the 
   // class of outer div
   // The second paramter is the speed between each letter is typed.   
-  sleep(1000).then(() => {
+  sleep(8000).then(() => {
     autoType(".type-js",200);
   });
   // sleep(5000).then(() => {
