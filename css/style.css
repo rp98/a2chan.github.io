@@ -60,10 +60,12 @@
   color: white;
   font-size: 80px;
   text-align: center;
+  margin-bottom: 5%;
 }
 .headline h1 {
   letter-spacing: 1.6px;
-  font-weight: 300;
+  font-weight: 375;
+  /* padding-bottom: 100px; */
   z-index: 10;;
 }
 
@@ -76,6 +78,7 @@ svg {
   width: 100vw;
   position: fixed;
   background-color: #000;
+  opacity:0.75;
  }
  
  path {
@@ -108,7 +111,7 @@ svg {
 
 /* fallingLetters */
 #fallingLetters {
-  height: 100vh;
+  height: 43vh;
   background: rgba(0,0,0,0);
   overflow: hidden;
   display: flex;

@@ -3,7 +3,7 @@ function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-sleep(2000).then(() => {
+sleep(6000).then(() => {
   playGame();
   polyfillKey(); 
 });
