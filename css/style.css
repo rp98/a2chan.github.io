@@ -118,9 +118,7 @@ svg {
   align-items: stretch;
   flex-direction: column;
   color: #eee;
-  font-family: -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-  font-family: monospace;
-  font-size: 5vh;
+  font-family: 'Open Sans', 'Roboto', 'Helvetica Neue', sans-serif;
   position: relative;
   top:0;
   left:0;
@@ -150,7 +148,7 @@ main > div {
   -webkit-perspective: 300px;
           perspective: 300px;
   transition: opacity .7s ease-in;
-  font-size: 5vh;
+  font-size: 4vh;
 }
 main > div.popped {
   opacity: 0;
@@ -199,24 +197,27 @@ main > div > span b {
 }
 
 /* Top bar */
-nav {
-  width:100%; 
-  background-color:#162449; 
-  opacity:0.9;
+/* nav {
+  width:80vw; 
+  background-color: #00004c;
+  opacity:0.9; 
   position:fixed;
   top:0;
   left:0;
+  margin-top: 10px;
+  margin-left: 10vw;
+  border-radius: 10px;
 }
 
 nav a {
   float:left;
-  padding: 20px 0px 20px 0px;
+  padding: 15px 0px 15px 0px;
   color:#fff; 
   width:auto;
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Mina", sans-serif;
   font-size:18px; 
-  width: 14.28%;
+  width: 12.5%;
   text-align:center;
   transition: all 0.5s ease 0s;
 }
@@ -224,6 +225,131 @@ nav a {
 nav a:hover {
   background-color:#fff; 
   color:#000; 
+  border-radius: 10px;
+} */
+
+#navmenu li{
+  list-style:none;
+  margin-left: 2vw;
+  height:39px;
+  padding:2px;
+  width:40px;
+}
+
+#navmenu span{
+  /* Container properties */
+  width:0;
+  left:38px;
+  padding:0;
+  position:absolute;
+  overflow:hidden;
+
+  /* Text properties */
+  font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+  font-size:18px;
+  font-weight:bold;
+  letter-spacing:0.6px;
+  white-space:nowrap;
+  line-height:39px;
+
+  /* CSS3 Transition: */
+  -webkit-transition: 0.25s;
+
+  /* Future proofing (these do not work yet): */
+  -moz-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#navmenu a{
+  /* The background sprite: */
+  background-image:url('../img/navigation.jpg') no-repeat;
+  background-color: #fff;
+
+  height:39px;
+  width:38px;
+  display:block;
+  position:relative;
+}
+
+/* General hover styles */
+
+#navmenu a:hover span{ 
+  width:auto; 
+  padding:0 20px;
+  overflow:visible; 
+}
+
+#navmenu a:hover{
+  text-decoration:none;
+
+  /* CSS outer glow with the box-shadow property */
+  -moz-box-shadow:0 0 5px #9ddff5;
+  -webkit-box-shadow:0 0 5px #9ddff5;
+  box-shadow:0 0 5px #9ddff5;
+}
+
+/* Green Button */
+
+#navmenu .Hindi { background-position:0 0;}
+#navmenu .Hindi:hover { background-position:0 -39px;}
+#navmenu .Hindi span{
+    background-color:#7da315;
+    color:#3d4f0c;
+    text-shadow:1px 1px 0 #99bf31;
+}
+
+/* Blue Button */
+
+#navmenu .Tamil { background-position:-38px 0;}
+#navmenu .Tamil:hover { background-position:-38px -39px;}
+#navmenu .Tamil span{
+    background-color:#1e8bb4;
+    color:#223a44;
+    text-shadow:1px 1px 0 #44a8d0;
+}
+
+/* Orange Button */
+
+#navmenu .Gujarati { background-position:-76px 0;}
+#navmenu .Gujarati:hover { background-position:-76px -39px;}
+#navmenu .Gujarati span{
+    background-color:#c86c1f;
+    color:#5a3517;
+    text-shadow:1px 1px 0 #d28344;
+}
+
+/* Yellow Button */
+
+#navmenu .Bangla { background-position:-114px 0;}
+#navmenu .Bangla:hover{ background-position:-114px -39px;}
+#navmenu .Bangla span{
+    background-color:#d0a525;
+    color:#604e18;
+    text-shadow:1px 1px 0 #d8b54b;
+}
+
+/* Purple Button */
+
+#navmenu .Urdu { background-position:-152px 0;}
+#navmenu .Urdu:hover { background-position:-152px -39px;}
+#navmenu .Urdu span{
+    background-color:#af1e83;
+    color:#460f35;
+    text-shadow:1px 1px 0 #d244a6;
+}
+
+a, a:visited,a:active {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+a img{
+	border:none;
 }
 
 

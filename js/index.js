@@ -9,8 +9,10 @@ sleep(6000).then(() => {
 });
 
 function playGame(replay) {
-  var LETTERS = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','இ'];
-  var animations = {'a':[],'b':[],'c':[],'d':[],'e':[],'f':[],'g':[],'h':[],'i':[],'j':[],'k':[],'l':[],'m':[],'n':[],'o':[],'p':[],'q':[],'r':[],'s':[],'t':[],'u':[],'v':[],'w':[],'x':[],'y':[],'z':[],'இ':[]};
+  var LETTERS = ['क','அ','c','తు','e','എ','ಮಾ','ਹੈ','ভা','ਵੇਂ','గ','झे','றி','n','o','p','ব','r','আ','t','ਹੈ','ನ್','ഷം','ఏ','வு','ज्ञा','இ'];
+  var animations = {'क':[],'அ':[],'c':[],'తు':[],'e':[],'എ':[],'ಮಾ':[],'ਹੈ':[],'ভা':[],'ਵੇਂ':[],'గ':[],'झे':[],'றி':[],'n':[],'o':[],'p':[],'ব':[],'r':[],'আ':[],'t':[],'ਹੈ':[],'ನ್':[],'ഷം':[],'ఏ':[],'வு':[],'ज्ञा':[],'இ':[]};
+  // var LETTERS = ['हिन्दी', 'தமிழ்', 'ગુજરાતી', 'বাংলা'];
+  // var animations = {'हिन्दी':[], 'தமிழ்':[], 'ગુજરાતી':[], 'বাংলা':[]};
   var gameOn = true;
   var timeOffset = 500; //interval between letters starting, will be faster over time
   var DURATION = 10000;
@@ -64,9 +66,6 @@ function playGame(replay) {
       var target = container;
       var char = target.textContent;
                                       
-      /*animations[char].pop();
-      target.classList.add('missed');
-      handleMisses();*/
     }
   }
   
@@ -198,7 +197,3 @@ $(document).ready(function(){
     autoType(".type-js",200);
   });
 });
-
-// $(document).ready(function() {
-//   $('#autotype').delay(4500).fadeIn(400);
-// });
