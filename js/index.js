@@ -1,25 +1,35 @@
 // sleep time expects milliseconds
 function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
+  // sleep(8000).then(() => {
+  //   autoType(".type-js",200);
+  // });
 }
 
-sleep(6000).then(() => {
-  playGame();
-  polyfillKey(); 
+$(document).ready(function(){
+  // Now to start autoTyping just call the autoType function with the 
+  // class of outer div
+  // The second paramter is the speed between each letter is typed.   
+  setTimeout(function(){
+    autoType(".type-js",200);
+  },8000);
+  // sleep(5000).then(() => {
+  //   // $("button").removeAttr("style");
+  // });
 });
+
+setTimeout(function() {
+  playGame();
+  polyfillKey();
+},6000);
 
 function playGame(replay) {
   var LETTERS = ['क','அ','c','తు','e','എ','ಮಾ','ਹੈ','ভা','ਵੇਂ','గ','झे','றி','n','o','p','ব','r','আ','t','ਹੈ','ನ್','ഷം','ఏ','வு','ज्ञा','இ'];
   var animations = {'क':[],'அ':[],'c':[],'తు':[],'e':[],'എ':[],'ಮಾ':[],'ਹੈ':[],'ভা':[],'ਵੇਂ':[],'గ':[],'झे':[],'றி':[],'n':[],'o':[],'p':[],'ব':[],'r':[],'আ':[],'t':[],'ਹੈ':[],'ನ್':[],'ഷം':[],'ఏ':[],'வு':[],'ज्ञा':[],'இ':[]};
-  // var LETTERS = ['हिन्दी', 'தமிழ்', 'ગુજરાતી', 'বাংলা'];
-  // var animations = {'हिन्दी':[], 'தமிழ்':[], 'ગુજરાતી':[], 'বাংলা':[]};
   var gameOn = true;
   var timeOffset = 500; //interval between letters starting, will be faster over time
   var DURATION = 10000;
   var main = document.getElementById('main');
-  // var header = document.querySelector('header');
-  // var scoreElement = document.getElementById('score');
-  // var score = parseFloat(scoreElement.textContent);
   var rate = 1;
   var RATE_INTERVAL = 0; //playbackRate will increase by .05 for each letter... so after 20 letters, the rate of falling will be 2x what it was at the start
   var misses = 0;
@@ -188,16 +198,3 @@ function autoType(elementClass, typingSpeed){
     }
   },1500);
 }
-
-$(document).ready(function(){
-  // Now to start autoTyping just call the autoType function with the 
-  // class of outer div
-  // The second paramter is the speed between each letter is typed.   
-  sleep(8000).then(() => {
-    autoType(".type-js",200);
-  });
-  // sleep(5000).then(() => {
-  //   // $("button").removeAttr("style");
-  // });
-});
-
