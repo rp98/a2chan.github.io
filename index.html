@@ -80,28 +80,11 @@
   <!-- Carousel -->
   <div align="center" class="bigcontainer">
     <carousel class="carousel">
-      <button ng-click="carouselCtrl.cycleBackward()" id="leftButt">Tree</button>
-      <button ng-click="carouselCtrl.cycleForward()" id="rightButt">Plant</button>
       <section class="carousel__container" ng-swipe-left="carouselCtrl.cycleForward()" ng-swipe-right="carouselCtrl.cycleBackward()">
         <slide class="carousel__slide">
+            <button ng-click="carouselCtrl.cycleBackward()" id="leftButt">&#60;</button>
           <div class="carousel__itemL">
             <div class="company" id="bizworld"></div>
-            <div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div>
-          </div>
-          <div class="carousel__item">
-            <div class="company" id="bubbledog"></div>
-            <div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div>
-          </div>
-          <div class="carousel__item">
-            <div class="company" id="bizworld"></div>
-            <div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div>
-          </div>
-          <div class="carousel__item">
-            <div class="company" id="bizworld"></div>
-            <div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div>
-          </div>
-          <div class="carousel__item">
-            <div  class="company" id="bizworld"></div>
             <div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div>
           </div>
           <div class="carousel__item">
@@ -112,6 +95,7 @@
             <div class="company" id="bizworld"></div>
             <div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div>
           </div>
+          <button ng-click="carouselCtrl.cycleForward()" id="rightButt">&#62;</button>
         </slide> 
         
         <!-- <slide class="carousel__slide">

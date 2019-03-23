@@ -12,6 +12,7 @@ $(document).ready(function(){
   // The second paramter is the speed between each letter is typed.   
   $("nav").hide(0).delay(7000).show(2000);
   $(".gettingStarted").hide(0).delay(7000).fadeTo(3000,1);
+  $(".bigcontainer").hide(0).delay(9000).fadeTo(3000,1);
   setTimeout(function(){
     autoType(".type-js",200);
   },8000);
