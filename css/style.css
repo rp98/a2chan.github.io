@@ -682,3 +682,24 @@ a img{
 #bubbledog {
   background-image: url("http://eskipaper.com/images/images-4.jpg");
 }
+@media screen and (max-width: 420px) {
+  .headline {
+    margin: 20px;
+    margin-bottom: 30%;
+    margin-left: 0.4em;
+  }
+  .headline h1 {
+    letter-spacing: 1.4px;
+    font-size:0.6em;
+  }
+  .gettingStarted {
+    margin: 10px 7px;
+    position: absolute;
+    top: 65vh;
+    left: 27.5vw;
+  }
+  .carousel__container {
+    width: 90vw;
+    right: -5vw;
+  }
+}
