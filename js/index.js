@@ -11,7 +11,7 @@ $(document).ready(function(){
   // class of outer div
   // The second paramter is the speed between each letter is typed.   
   $("nav").hide(0).delay(7000).show(2000);
-  $("button").hide(0).delay(7000).fadeTo(3000,1);
+  $(".gettingStarted").hide(0).delay(7000).fadeTo(3000,1);
   setTimeout(function(){
     autoType(".type-js",200);
   },8000);
@@ -19,6 +19,10 @@ $(document).ready(function(){
   //   // $("button").removeAttr("style");
   // });
 });
+
+setTimeout(function(){
+  $("#inkpot").fadeOut(2500);
+}, 5500);
 
 setTimeout(function() {
   playGame();
@@ -200,3 +204,126 @@ function autoType(elementClass, typingSpeed){
     }
   },1500);
 }
+
+// Carousel
+
+var carousel = angular.module('carousel', ['ngAnimate', 'ngTouch']);
+
+carousel.directive('carousel', function($animate) {
+  return {
+    restrict: 'E',
+    scope: true,
+    require: 'carousel',
+    controllerAs: 'carouselCtrl',
+    controller: function CarouselCtrl($scope) {
+      var slides = [],
+          scopes = [],
+          currentSlideIdx = 0;
+      
+      function transcludeSlide(idx) {
+        console.info('Transcluding slide #%d', idx);
+        if (!scopes[idx]) {
+          scopes[idx] = $scope.$new();
+          slides[idx].transcludeFn(scopes[idx], function(clone) {
+            slides[idx].element.append(clone);
+          });
+        }
+      }
+      
+      function removeSlide(idx) {
+        console.info('Removing slide #%d', idx);
+        if (scopes[idx]) {
+          scopes[idx].$destroy();
+          scopes[idx] = null;
+        }
+        slides[idx].element.empty();
+      }
+      
+      this.currentSlideIdx = function() {
+        return currentSlideIdx;
+      };
+      
+      this.slideCount = function() {
+        return slides.length;
+      };
+      
+      this.registerSlide = function(element, transcludeFn) {
+        slides.push({
+          element: element,
+          transcludeFn: transcludeFn
+        });
+      };
+      
+      this.prepareSlides = function(idx) {
+        var i,l;
+        
+        transcludeSlide(idx);
+        slides[idx].element.addClass('carousel__slide--active');
+
+        if (idx > 0) {
+          transcludeSlide(idx - 1);
+          slides[idx - 1].element.addClass('carousel__slide--off-left');
+        }
+        if (idx < slides.length - 1) {
+          transcludeSlide(idx + 1);
+          slides[idx + 1].element.addClass('carousel__slide--off-right');
+        }
+
+        for (i = 0; i < idx - 1; i++) { 
+          removeSlide(i);
+        }
+        for (i = idx + 2, l = slides.length; i < l; i++) { 
+          removeSlide(i);
+        }
+      };
+      
+      this.cycleForward = function() {
+        if (currentSlideIdx < slides.length - 1) {
+          $animate.setClass(
+            slides[currentSlideIdx].element, 
+            'carousel__slide--off-left',
+            'carousel__slide--active'
+          );
+          currentSlideIdx++;
+          $animate.setClass(
+            slides[currentSlideIdx].element, 
+            'carousel__slide--active',
+            'carousel__slide--off-right'
+          );
+          this.prepareSlides(currentSlideIdx);
+        }
+      };
+      
+      this.cycleBackward = function() {
+        if (currentSlideIdx > 0) {
+          $animate.setClass(
+            slides[currentSlideIdx].element, 
+            'carousel__slide--off-right',
+            'carousel__slide--active'
+          );
+          currentSlideIdx--;
+          $animate.setClass(
+            slides[currentSlideIdx].element, 
+            'carousel__slide--active',
+            'carousel__slide--off-left'
+          );
+          this.prepareSlides(currentSlideIdx);
+        }
+      };
+    },
+    link: function(scope, iElement, iAttrs, ctrl) {
+      ctrl.prepareSlides(0);
+    }
+  };
+});
+
+carousel.directive('slide', function() {
+  return {
+    restrict: 'E',
+    require: '^carousel',
+    transclude: true,
+    link: function(scope, iElement, iAttr, carouselCtrl, transcludeFn) {
+      carouselCtrl.registerSlide(iElement, transcludeFn);
+    }
+  };
+});

@@ -201,36 +201,6 @@ main > div > span b {
 }
 
 /* Top bar */
-/* nav {
-  width:80vw; 
-  background-color: #00004c;
-  opacity:0.9; 
-  position:fixed;
-  top:0;
-  left:0;
-  margin-top: 10px;
-  margin-left: 10vw;
-  border-radius: 10px;
-}
-
-nav a {
-  float:left;
-  padding: 15px 0px 15px 0px;
-  color:#fff; 
-  width:auto;
-  text-decoration: none;
-  font-family: "Mina", sans-serif;
-  font-size:18px; 
-  width: 12.5%;
-  text-align:center;
-  transition: all 0.5s ease 0s;
-}
-
-nav a:hover {
-  background-color:#fff; 
-  color:#000; 
-  border-radius: 10px;
-} */
 
 #navmenu li{
   list-style:none;
@@ -357,7 +327,7 @@ a img{
 }
 
 /* Get started button */
-button {
+.gettingStarted {
   display:block;
   height: auto;
   width: 150px;
@@ -414,4 +384,296 @@ button {
   transition: all 0.2s ease-in;
 }
 
+/* Carousel */
+.bigcontainer {
+  background-color: rgba(0,0,0,0);
+  padding: 50px;
+}
 
+.carousel__container {
+  height: 40%;
+  background-color:rgba(0,0,0,0);
+  margin: 0 auto;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.carousel__slide {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  transition: 0.25s ease-in-out;
+}
+.carousel__slide--off-left, .carousel__slide--off-left-remove.carousel__slide--active-add {
+  position: absolute;
+  width: 100%;
+  left: -100%;
+  top: 0;
+}
+.carousel__slide--off-left.carousel__slide--active-add-active, .carousel__slide--off-left-remove.carousel__slide--active-add.carousel__slide--active-add-active {
+  left: 0;
+}
+.carousel__slide--off-right, .carousel__slide--off-right-remove.carousel__slide--active-add {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  top: 0;
+}
+.carousel__slide--off-right.carousel__slide--active-add-active, .carousel__slide--off-right-remove.carousel__slide--active-add.carousel__slide--active-add-active {
+  left: 0;
+}
+.carousel__slide--active {
+  left: 0;
+}
+.carousel__item {
+  background-color: rgba(0,0,0,0);
+  height: 200px;
+  width: 250px;
+  border: 0;
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+.carousel__item:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.8);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.8);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.8);
+  transition: all 200ms ease-in;
+  transform: scale(1.8);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.carousel__itemL {
+  background: rgba(0,0,0,0);
+  height: 200px;
+  width: 250px;
+  border: 0;
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+  transform-origin: left;
+}
+.carousel__itemL:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.8);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.8);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.8);
+  transition: all 200ms ease-in;
+  transform: scale(1.8);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.carousel__itemR {
+  background: rgba(0,0,0,0);
+  height: 200px;
+  width: 250px;
+  border: 0;
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+  transform-origin: right;
+}
+.carousel__itemR:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.8);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.8);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.8);
+  transition: all 200ms ease-in;
+  transform: scale(1.8);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.company:hover {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.carousel__item:hover .company {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.carousel__item:hover #intext {
+  visibility: visible;
+  height: auto;
+  width: auto;
+  opacity: 1;
+}
+
+.carousel__item #intext {
+  visibility: hidden;
+  color: #000;
+  flex: 1 1 auto;
+  min-height: 100px;
+  position: absolute;
+  opacity: 0;
+  padding-left: 10%;
+  transition: all 1.1s ease-in-out, visibility 1.1s;
+  will-change: transform;
+  transform: translateY(100%);
+}
+
+.carousel__itemL:hover .company {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.carousel__itemL:hover #intext {
+  visibility: visible;
+  height: auto;
+  width: auto;
+  opacity: 1;
+}
+
+.carousel__itemL #intext {
+  visibility: hidden;
+  color: #000;
+  flex: 1 1 auto;
+  min-height: 100px;
+  position: absolute;
+  opacity: 0;
+  padding-left: 10%;
+  transition: all 1.1s ease-in-out, visibility 1.1s;
+  will-change: transform;
+  transform: translateY(100%);
+}
+
+.carousel__itemR:hover .company {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.carousel__itemR:hover #intext {
+  visibility: visible;
+  height: auto;
+  width: auto;
+  opacity: 1;
+}
+
+.carousel__itemR #intext {
+  visibility: hidden;
+  color: #000;
+  flex: 1 1 auto;
+  min-height: 100px;
+  position: absolute;
+  opacity: 0;
+  padding-left: 10%;
+  transition: all 1.1s ease-in-out, visibility 1.1s;
+  will-change: transform;
+  transform: translateY(100%);
+}
+
+.company {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#leftButt {
+  display:block;
+  height: auto;
+  width: 150px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #383736;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 2;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+  position: absolute;
+  top: 65vh;
+  left: 40vw;
+}
+
+#rightButt {
+  display:block;
+  height: auto;
+  width: 150px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #383736;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 2;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+  position: absolute;
+  top: 65vh;
+  left: 50vw;
+}
+
+
+/* Images for the slider */
+#greenbasic {
+  background-color: #fff;
+}
+
+#bizworld {
+  background-size: cover;
+  background-image: url("https://storage.googleapis.com/news-photo/1533284893_ouRI5v_BW-logo.jpg");
+}
+
+#bubbledog {
+  background-image: url("http://eskipaper.com/images/images-4.jpg");
+}
