@@ -10,6 +10,8 @@ $(document).ready(function(){
   // Now to start autoTyping just call the autoType function with the 
   // class of outer div
   // The second paramter is the speed between each letter is typed.   
+  $("nav").hide(0).delay(7000).show(2000);
+  $("button").hide(0).delay(7000).fadeTo(3000,1);
   setTimeout(function(){
     autoType(".type-js",200);
   },8000);
