@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" class="ng-app: carousel;">
 
 <head>
   <meta charset="UTF-8">
@@ -98,15 +98,25 @@
           <button ng-click="carouselCtrl.cycleForward()" id="rightButt">&#62;</button>
         </slide> 
         
-        <!-- <slide class="carousel__slide">
-          <div class="carousel__item"><div class="company" id="bizworld"></div><div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div></div>
-          <div class="carousel__item"><div class="company" id="bubbledog"></div><div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div></div>
-          
-          <div class="carousel__item"><div class="company" id="bizworld"></div><div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div></div>
-          <div class="carousel__item"><div class="company" id="bizworld"></div><div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div></div>
-          <div class="carousel__item"><div  class="company" id="bizworld"></div><div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div></div>
-          <div class="carousel__item"><div  class="company" id="bizworld"></div><div id="intext">This never happened<br>This is all bullshit<br>I need my money back</div></div>
-        </slide> -->
+        <slide class="carousel__slide">
+          <button ng-click="carouselCtrl.cycleBackward()" id="leftButt">&#60;</button>
+          <div class="carousel__itemL">
+            <div class="company" id="bubbledog"></div>
+            <div id="intext">This never happened<br>This is all bullshit<br>I need my money back
+            </div>
+          </div>
+          <div class="carousel__item">
+            <div class="company" id="bizworld"></div>
+            <div id="intext">This never happened<br>This is all bullshit<br>I need my money back
+            </div>
+          </div>
+          <div class="carousel__itemR">
+            <div class="company" id="bizworld"></div>
+            <div id="intext">This never happened<br>This is all bullshit<br>I need my money back
+            </div>
+          </div>
+          <button ng-click="carouselCtrl.cycleForward()" id="rightButt">&#62;</button>
+        </slide>
       </section>
     </carousel>
     </div>
