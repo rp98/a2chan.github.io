@@ -88,7 +88,7 @@ $(document).ready(function(){
 
   // Falling letters begins
   setTimeout(function(){
-    autoType(".text-js",200);
+    autoType(".type-js",200);
   },8000);
 });
 
@@ -255,20 +255,19 @@ function polyfillKey() {
 // autotype
 function autoType(elementClass, typingSpeed){
   var thhis = $(elementClass);
-  // thhis.parent().css({
-  //   // "position": "relative",
-  //   // "display": "inline-block"
-  // });
-  thhis.parent().prepend('<div class="cursor" style="right: initial; left:0;"></div>');
-  // thhis = thhis.find(".text-js");
+  thhis.css({
+    "position": "relative",
+    "display": "inline-block"
+  });
+  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  thhis = thhis.find(".text-js");
   var text = thhis.text().trim().split('');
   var amntOfChars = text.length;
   var newString = "";
   // thhis.text("|");
   setTimeout(function(){
     // thhis.css("opacity",1);
-    $(".cursor").removeAttr("style");
-    // thhis.prev().removeAttr("style");
+    thhis.prev().removeAttr("style");
     thhis.text("");
     for(var i = 0; i < amntOfChars; i++){
       (function(i,char){
