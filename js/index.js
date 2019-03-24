@@ -88,7 +88,7 @@ $(document).ready(function(){
 
   // Falling letters begins
   setTimeout(function(){
-    autoType(".type-js",200);
+    autoType(".text-js",200);
   },8000);
 });
 
@@ -255,12 +255,12 @@ function polyfillKey() {
 // autotype
 function autoType(elementClass, typingSpeed){
   var thhis = $(elementClass);
-  thhis.css({
-    "position": "relative",
-    "display": "inline-block"
-  });
-  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
-  thhis = thhis.find(".text-js");
+  // thhis.parent().css({
+  //   // "position": "relative",
+  //   // "display": "inline-block"
+  // });
+  thhis.parent().prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  // thhis = thhis.find(".text-js");
   var text = thhis.text().trim().split('');
   var amntOfChars = text.length;
   var newString = "";

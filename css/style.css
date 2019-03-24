@@ -12,11 +12,12 @@ body {
 
 }
 
-#pepperdesc {
+#pepperdesc{
+  color:white;
   position: relative;
-  top: 10vh;
-  left: 10vw;
+  bottom: 10vh;
 }
+
 
 .cursor {
   display: block;
@@ -72,7 +73,7 @@ body {
   margin: 20px;
   color: white;
   text-align: center;
-  margin-bottom: 9.5%;
+  margin-bottom: 10vh;
   opacity: 1;
 }
 .headline #autotext {
@@ -84,6 +85,70 @@ body {
   opacity: 1;
 }
 
+#gsbutton{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 8vh;
+}
+/* Get started button */
+.gettingStarted {
+  display:block;
+  height: auto;
+  width: 150px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #383736;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+  position: relative;
+}
+
+.gettingStarted:hover {
+  color: whitesmoke;
+}
+
+.gettingStarted:before {
+  content: "";
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 0.09s ease-in;
+}
+
+.gettingStarted:hover:before {
+  top: 0;
+}
+
+.fade:before{
+  content:"→";
+  position:absolute;
+  color:#383736;
+  left: 88%;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
 
 /* inkpot */
 #loadink {
@@ -244,7 +309,7 @@ nav ul li {
   width: 3vw;;
   height:8vh;
   cursor: pointer;
-  background: #ec7014;
+  background: #fe9929;
   color: white;
 	text-transform: uppercase;
   transition:all .4s ease-out;
@@ -254,7 +319,7 @@ nav ul li {
 nav ul li:after {
 	position: absolute;
 	background: white;
-	color: #ec7014;
+	color: #fe9929;
 	top:0;
 	left: 3vw;;
   width: 3vw; 
@@ -306,70 +371,13 @@ nav ul li div span{
 }
 
 
-/* Get started button */
-.gettingStarted {
-  display:block;
-  height: auto;
-  width: 150px;
-  margin: 10px 7px;
-  padding: 5px 5px;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #383736;
-  border: 2px #383736 solid;
-  border-radius: 4px;
-  text-transform: uppercase;
-  outline: 0;
-  overflow:hidden;
-  background: none;
-  z-index: 1;
-  cursor: pointer;
-  transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
-  position: absolute;
-  top: 50vh;
-  left: 45vw;
-}
-
-.gettingStarted:hover {
-  color: whitesmoke;
-}
-
-.gettingStarted:before {
-  content: "";
-  position: absolute;
-  background: #383736;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 100%;
-  z-index: -1;
-  transition: top 0.09s ease-in;
-}
-
-.gettingStarted:hover:before {
-  top: 0;
-}
-
-.fade:before{
-  content:"→";
-  position:absolute;
-  color:#383736;
-  left: 88%;
-  opacity: 0;
-  transition: all 0.2s ease-in;
-}
 
 /* Carousel */
 
 .testimonials {
   background-color: rgba(0,0,0,0);
   position: relative;
-  padding-top: 30vh;
+  padding-top: 35vh;
   max-width: 100vw;
 }
 .testimonials:after {
@@ -825,7 +833,7 @@ a{
 	}
 
 	.navwrapper{
-		transition: all 0.3s ease-in-out;
+		transition: all 0.8s ease-in-out;
 		padding-top: 2.5rem;
     	padding-right: auto;
     	padding-bottom: 0.7rem;
@@ -835,7 +843,7 @@ a{
 	}                                  /***** scrolling trans to black***********/
 	.navwrapper{
 		background: transparent;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.8s ease-in-out;
 	}
 
 	.notonhomepage{             /* add this class when you want to shift to black nav*/
@@ -853,7 +861,7 @@ a{
 		justify-content: center;
 	}
 	.logo{
-		transition: all 0.3s ease-in-out;
+		transition: all 0.8s ease-in-out;
 		flex-basis: 20%;
 	}	
 	.navlist{
