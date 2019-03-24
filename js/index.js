@@ -48,9 +48,13 @@ $(document).ready(function(){
   // });
 });
 
+// setTimeout(function(){
+//   $("#inkpot").fadeOut(2500);
+// }, 5500);
+
 setTimeout(function(){
-  $("#inkpot").fadeOut(2500);
-}, 5500);
+  $("#inkpot").fadeOut(500);
+}, 500);
 
 setTimeout(function() {
   playGame();

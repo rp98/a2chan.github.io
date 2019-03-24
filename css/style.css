@@ -5,10 +5,17 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;background-color: #ffe5ce;
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffe5ce;
   opacity: 0.9;
   max-width: 100%; 
 
+}
+
+#pepperdesc {
+  position: relative;
+  top: 10vh;
+  left: 10vw;
 }
 
 .cursor {
@@ -46,7 +53,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Special Elite', cursive;
+  /* font-family: "Open Sans", sans-serif; */
 }
 
 #autotype {
@@ -124,7 +132,7 @@ body {
 
 /* fallingLetters */
 #fallingLetters {
-  height: 38vh;
+  height: 35vh;
   background: rgba(0,0,0,0);
   overflow: hidden;
   display: flex;
@@ -210,131 +218,102 @@ main > div > span b {
   }
 }
 
-/* Top bar */
+/* Nav bar */
 
-#navmenu li{
-  list-style:none;
-  margin-left: 2vw;
-  height:39px;
-  padding:2px;
-  width:40px;
+*,*:before,*:after {
+	box-sizing: border-box;
 }
 
-#navmenu span{
-  /* Container properties */
-  width:0;
-  left:38px;
-  padding:0;
-  position:absolute;
-  overflow:hidden;
-
-  /* Text properties */
-  font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
-  font-size:18px;
-  font-weight:bold;
-  letter-spacing:0.6px;
-  white-space:nowrap;
-  line-height:39px;
-
-  /* CSS3 Transition: */
-  -webkit-transition: 0.25s;
-
-  /* Future proofing (these do not work yet): */
-  -moz-transition: 0.25s;
-  transition: 0.25s;
+:after {
+	content: "";
 }
 
-#navmenu a{
-  /* The background sprite: */
-  background-image:url('../img/navigation.jpg') no-repeat;
-  background-color: #fff;
+/* section {
+  position: relative;
+  left: 100px;
+} */
 
-  height:39px;
-  width:38px;
-  display:block;
-  position:relative;
+nav {
+  float: left;
+  display: block;
+  position: fixed;
+  top:30vh;
+  left: 0;
+  height:32vh;
+  background: transparent;
+  /* border: 1px solid black; */
 }
 
-/* General hover styles */
-
-#navmenu a:hover span{ 
-  width:auto; 
-  padding:0 20px;
-  overflow:visible; 
+nav ul {
+	text-align: center;
 }
 
-#navmenu a:hover{
-  text-decoration:none;
-
-  /* CSS outer glow with the box-shadow property */
-  -moz-box-shadow:0 0 5px #9ddff5;
-  -webkit-box-shadow:0 0 5px #9ddff5;
-  box-shadow:0 0 5px #9ddff5;
+nav ul li {
+	position: relative;
+  width: 3vw;;
+  height:8vh;
+  cursor: pointer;
+  background: #ec7014;
+  color: white;
+	text-transform: uppercase;
+  transition:all .4s ease-out;
+  border: 1px solid white;
 }
 
-/* Green Button */
-
-#navmenu .Hindi { background-position:0 0;}
-#navmenu .Hindi:hover { background-position:0 -39px;}
-#navmenu .Hindi span{
-    background-color:#7da315;
-    color:#3d4f0c;
-    text-shadow:1px 1px 0 #99bf31;
+nav ul li:after {
+	position: absolute;
+	background: white;
+	color: #ec7014;
+	top:0;
+	left: 3vw;;
+  width: 3vw; 
+  height: 100%;
+  opacity:.5;
+  transform: perspective(17vw) rotateY(90deg);
+	transform-origin: 0 100%;
+	transition:all .4s ease-out;
 }
 
-/* Blue Button */
-
-#navmenu .Tamil { background-position:-38px 0;}
-#navmenu .Tamil:hover { background-position:-38px -39px;}
-#navmenu .Tamil span{
-    background-color:#1e8bb4;
-    color:#223a44;
-    text-shadow:1px 1px 0 #44a8d0;
+nav ul li:nth-child(1):after { 
+	content: "हिन्दी";
+	line-height: 8vh;
+}
+nav ul li:nth-child(2):after { 
+	content: "தமிழ்";
+	line-height: 8vh;
+}
+nav ul li:nth-child(3):after { 
+	content: "ગુજરાતી";
+	line-height: 8vh;
+}
+nav ul li:nth-child(4):after { 
+	content: "বাংলা";
+	line-height: 8vh;
 }
 
-/* Orange Button */
-
-#navmenu .Gujarati { background-position:-76px 0;}
-#navmenu .Gujarati:hover { background-position:-76px -39px;}
-#navmenu .Gujarati span{
-    background-color:#c86c1f;
-    color:#5a3517;
-    text-shadow:1px 1px 0 #d28344;
+nav ul li:hover {
+	transform: translateX(-3vw);
 }
 
-/* Yellow Button */
-
-#navmenu .Bangla { background-position:-114px 0;}
-#navmenu .Bangla:hover{ background-position:-114px -39px;}
-#navmenu .Bangla span{
-    background-color:#d0a525;
-    color:#604e18;
-    text-shadow:1px 1px 0 #d8b54b;
+nav ul li:hover:after {
+  opacity: 1;
+	transform: perspective(17vw) rotateY(0deg) scale(1) ;
 }
 
-/* Purple Button */
 
-#navmenu .Urdu { background-position:-152px 0;}
-#navmenu .Urdu:hover { background-position:-152px -39px;}
-#navmenu .Urdu span{
-    background-color:#af1e83;
-    color:#460f35;
-    text-shadow:1px 1px 0 #d244a6;
+nav ul li > div {
+	display: inline-block;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background: transparent;
 }
 
-a, a:visited,a:active {
-	color:#0196e3;
-	text-decoration:none;
-	outline:none;
+nav ul li div { position: relative; }
+
+nav ul li div span{
+  font-size: 3vh;
 }
 
-a:hover{
-	text-decoration:underline;
-}
-
-a img{
-	border:none;
-}
 
 /* Get started button */
 .gettingStarted {
@@ -484,27 +463,7 @@ a img{
   background-color: rgba(0,0,0,0);
 }
 
-@media screen and (max-width: 420px) {
-  .headline {
-    margin: 20px;
-    margin-bottom: 30%;
-    margin-left: 0.4em;
-  }
-  .headline h1 {
-    letter-spacing: 1.4px;
-    font-size:0.6em;
-  }
-  .gettingStarted {
-    margin: 10px 7px;
-    position: absolute;
-    top: 65vh;
-    left: 27.5vw;
-  }
-  .carousel__container {
-    width: 90vw;
-    right: -5vw;
-  }
-}
+
 
 /* Trail Lines */
 
@@ -519,7 +478,7 @@ a img{
 	position:absolute;
 	top:110%;
 	left:9%;
-  width: 90%;
+  width: 70%;
    margin: -75px 0 0 -75px;
    }
 #line1{
@@ -527,7 +486,7 @@ a img{
   position:absolute;
 	top:110%;
 	left:9%;
-  width: 90%;
+  width: 70%;
    margin: -75px 0 0 -75px;
 }
 #line2{
@@ -535,7 +494,7 @@ a img{
 	position:absolute;
 	top: 110%;
 	left:9%;
-  width: 90%;
+  width: 70%;
   margin: -75px 0 0 -75px;
 }
 
@@ -598,4 +557,28 @@ min-width:100%;
 .demo{
 min-height:100%;
 min-width:100%;
+}
+
+/* Trail ends */
+
+@media screen and (max-width: 420px) {
+  .headline {
+    margin: 20px;
+    margin-bottom: 30%;
+    margin-left: 0.4em;
+  }
+  .headline h1 {
+    letter-spacing: 1.4px;
+    font-size:0.6em;
+  }
+  .gettingStarted {
+    margin: 10px 7px;
+    position: absolute;
+    top: 65vh;
+    left: 27.5vw;
+  }
+  .carousel__container {
+    width: 90vw;
+    right: -5vw;
+  }
 }
