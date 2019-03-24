@@ -14,6 +14,7 @@ $(document).ready(function(){
   $(".gettingStarted").delay(7000).fadeTo(3000,1);
   $("#autotype").delay(9400).fadeTo(1000,1);
   $(".container").hide(0).delay(9000).fadeTo(3000,1);
+  $("#fallingLetters").delay(8000).fadeTo(2000,1);
   $('#customers-testimonials').owlCarousel( {
     loop: true,
     center: true,
