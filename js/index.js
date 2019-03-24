@@ -10,11 +10,55 @@ $(document).ready(function(){
   // Now to start autoTyping just call the autoType function with the 
   // class of outer div
   // The second paramter is the speed between each letter is typed.   
-  $("nav").delay(7000).show(2000);
-  $(".gettingStarted").delay(7000).fadeTo(3000,1);
-  $("#autotype").delay(9400).fadeTo(1000,1);
-  $(".container").hide(0).delay(9000).fadeTo(3000,1);
-  $("#fallingLetters").delay(8000).fadeTo(2000,1);
+  $("nav").delay(700).show(2000);
+  $(".gettingStarted").delay(700).fadeTo(3000,1);
+  $("#autotype").delay(940).fadeTo(1000,1);
+  $(".container").hide(0).delay(900).fadeTo(3000,1);
+  $("#fallingLetters").delay(800).fadeTo(2000,1);
+
+
+  // Top bar begins
+  $(document).scroll(function(){
+		if( $(document).scrollTop() > 95 )
+		{
+			$('.navwrapper').addClass("notonhomepage");
+			$('.logo').addClass("hideme");
+		}
+		else{
+			$('.navwrapper').removeClass("notonhomepage");
+			$('.logo').removeClass("hideme");
+		}
+
+	});
+/******************** hide n show nav *************************/
+
+	$('.toggleMenu').click(function(){
+		$('.sidemenu').addClass("showmenu");
+		$('.toggleMenu').addClass("changeopacity");
+	});
+
+	$('.cross').click(function(){
+		$('.sidemenu').removeClass("showmenu");
+		$('.toggleMenu').removeClass("changeopacity");
+	});
+
+/************************* menu scales when scrolled ****************************/
+	$(document).scroll(function(){
+		if( $(document).scrollTop() > 250 )
+		{
+			$('.mobilelogo').addClass("hideme");
+			$('.toggleMenu').css('padding','9px 12px 9px 9px');
+		}
+		else{
+			$('.mobilelogo').removeClass("hideme");
+			$('.toggleMenu').css('padding','15px 20px 15px 15px');
+		}
+
+  });
+  
+  // Top bar ends
+
+  // Carousel begins
   $('#customers-testimonials').owlCarousel( {
     loop: true,
     center: true,
@@ -40,12 +84,12 @@ $(document).ready(function(){
       }
     }
   });
+  // Carousel ends
+
+  // Falling letters begins
   setTimeout(function(){
     autoType(".type-js",200);
   },8000);
-  // sleep(5000).then(() => {
-  //   // $("button").removeAttr("style");
-  // });
 });
 
 // setTimeout(function(){
