@@ -10,9 +10,9 @@ $(document).ready(function(){
   // Now to start autoTyping just call the autoType function with the 
   // class of outer div
   // The second paramter is the speed between each letter is typed.   
-  $("nav").hide(0).delay(7000).show(2000);
-  $(".gettingStarted").hide(0).delay(7000).fadeTo(3000,1);
-  $(".bigcontainer").hide(0).delay(9000).fadeTo(3000,1);
+  $("nav").delay(7000).show(2000);
+  $(".gettingStarted").delay(7000).fadeTo(3000,1);
+  $("#autotype").delay(9400).fadeTo(1000,1);
   $(".container").hide(0).delay(9000).fadeTo(3000,1);
   $('#customers-testimonials').owlCarousel( {
     loop: true,
@@ -20,6 +20,7 @@ $(document).ready(function(){
     items: 3,
     margin: 30,
     autoplay: true,
+    lazyLoad: true,
     dots:false,
     autoplayHoverPause:true,
     nav:true,
@@ -214,9 +215,9 @@ function autoType(elementClass, typingSpeed){
   var text = thhis.text().trim().split('');
   var amntOfChars = text.length;
   var newString = "";
-  thhis.text("|");
+  // thhis.text("|");
   setTimeout(function(){
-    thhis.css("opacity",1);
+    // thhis.css("opacity",1);
     $(".cursor").removeAttr("style");
     // thhis.prev().removeAttr("style");
     thhis.text("");
@@ -230,32 +231,3 @@ function autoType(elementClass, typingSpeed){
     }
   },1500);
 }
-
-// Carousel
-
-// jQuery(document).ready(function($) {
-//   "use strict";
-//   $('#customers-testimonials').owlCarousel( {
-//       loop: true,
-//       center: true,
-//       items: 3,
-//       margin: 30,
-//       autoplay: true,
-//       dots:true,
-//       nav:true,
-//       autoplayTimeout: 8500,
-//       smartSpeed: 450,
-//       navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-//       responsive: {
-//         0: {
-//           items: 1
-//         },
-//         768: {
-//           items: 2
-//         },
-//         1170: {
-//           items: 3
-//         }
-//       }
-//     });
-//   });
