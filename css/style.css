@@ -145,7 +145,7 @@ main {
   justify-content: center;
 }
 main p {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   text-align: center;
   margin-top: 5vh;
   padding: 0 2rem;
@@ -161,7 +161,8 @@ main > div {
   -webkit-perspective: 300px;
           perspective: 300px;
   transition: opacity .7s ease-in;
-  font-size: 4vh;
+  font-size: 3vh;
+  font-weight: 1;
 }
 main > div.popped {
   opacity: 0;
