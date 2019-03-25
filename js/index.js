@@ -6,10 +6,14 @@ function sleep (time) {
   // });
 }
 
+$(window).on("beforeunload", function(){
+  $(window).scrollTop(0);
+});
+
 $(document).ready(function(){
   // Now to start autoTyping just call the autoType function with the 
   // class of outer div
-  // The second paramter is the speed between each letter is typed.   
+  // The second paramter is the speed between each letter is typed.  
   $("body").css({"overflow":"hidden"});
   $("nav, .headertop").delay(7000).fadeTo(2000,1);
   $(".gettingStarted").delay(7000).fadeTo(3000,1);
@@ -250,7 +254,8 @@ function autoType(elementClass, typingSpeed){
   var thhis = $(elementClass);
   thhis.css({
     "position": "relative",
-    "display": "inline-block"
+    "display": "inline-block",
+    // "background": "black"
   });
   thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
   thhis = thhis.find(".text-js");
