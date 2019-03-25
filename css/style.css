@@ -489,10 +489,10 @@ z-index:-1;
 /*
 	Elements
 */
-.spacer {
-	/* text-align: center; */
-	/* min-height: 100px; */
-}
+/* .spacer {
+	text-align: center;
+	min-height: 100px;
+} */
 .spacer.s0 {
   
 	min-height: 1px;
@@ -547,7 +547,7 @@ z-index:-1;
 }
 	#tabs:hover{
     /* add this class to whichever li to focus*/
-		border-bottom: 2px solid white;          /* adds underline to li*/
+		border-bottom: 2px solid #162449;          /* adds underline to li*/
 		margin-bottom: -12px;
     padding-bottom: 10.5px;
     text-decoration: none;
@@ -570,7 +570,7 @@ a{
 	display: inline-block;            /* to allign nav items horizontally */
 }
 .nav a,.navmobile a{
-	color: white;
+	color: #162449;
 }
 
 
