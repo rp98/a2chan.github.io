@@ -36,6 +36,13 @@
 
 <body background="img/trianglify12.png" style="background-repeat: no-repeat;">
 
+
+
+    <!-- Falling letters begin -->
+    <div id='fallingLetters' style="opacity:0;">
+      <main id="main"></main>
+  </div>
+  <!-- Falling letters end -->
   <!-- Autotype begins -->
   <div id='autotype'>
     <div class="headertop" style="opacity: 0;">
@@ -45,7 +52,7 @@
             <li id="tabs"><a href="#" style="text-decoration: none">Home</a></li>
             <li id="tabs"><a href="https://pepper.org.in/about/" target="_blank" style="text-decoration: none">About</a></li>
             <li id="tabs"><a href="https://pepper.org.in/blog/" target="_blank" style="text-decoration: none">Blog</a></li>
-            <li id="tabs"><a href="#section-1" style="padding-right: 0px; text-decoration: none;">Contact us</a></li>
+            <li id="tabs"><a href="#section-1" style="text-decoration: none;">Contact us</a></li>
           </ul>
         </div>
       </div>
@@ -88,11 +95,6 @@
   </div>
   <!-- Autotype ends -->
 
-  <!-- Falling letters begin -->
-  <div id='fallingLetters' style="opacity:0;">
-      <main id="main"></main>
-  </div>
-  <!-- Falling letters end -->
 
   <!-- Carousel -->
   <div id="owlwrapper" style="opacity: 0; background-image: url('img/orangewall.jpg'); background-size: contain; background-repeat:repeat-x" >
@@ -110,6 +112,7 @@
   </div>
 
     <!-- Carousel ends -->
+
   <div id="bgimage" style="background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)),url('img/slash.jpg'); background-repeat:repeat;background-size: contain">
     
     <!-- <img src="img/wall.jpg" style="position:relative; top:0; left:0; z-index: -2; background-repeat:repeat-y;"> -->
@@ -207,10 +210,12 @@
     <path id="wordy3" style="stroke-linecap: round; stroke-linejoin: round; opacity: 0.8" fill="none" stroke="#AD333E" stroke-width="80" d="M 125 1200 L 950 1200 C 975 1200 1000 1225 1000 1250 L 1000 1500 C 1000 1525 975 1550 950 1550 L 800 1550 C 775 1550 750 1575 750 1600 L 750 1850"></path>
     </svg>
 
-    <div id="1920x1080">
+    <div id="breakline1920">
     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
     </div>
-
+    <div id="breakline1366"></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+    </div>
+    <div id="breakline420"></br></br></div>
     <div class="spacer s2"></div>
   </div>
   
@@ -232,7 +237,7 @@
     pathPrepare($wordy2);
     pathPrepare($wordy3);
     
-    
+    var width=$(window).width();
     // init controller
     var controller = new ScrollMagic.Controller();
 
@@ -243,10 +248,20 @@
     //	.add(TweenMax.to($wordy, 0.1, {strokeDashoffset: 0,ease:Linear.easeNone})); 
       //.add(TweenMax.to("path", 1, {stroke: "red", ease:Linear.easeNone}), 0);			// change color during the whole thing
     // build scene
+    if(width>1800)
+    {
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 2600, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            // .addIndicators()
+            .addIndicators()
             .addTo(controller);
+    }
+    else if(width>1200)
+    {
+    var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 1800, tweenChanges: false}) //change duration to increase height of the scroll based animation
+            .setTween(tween)
+            .addIndicators()
+            .addTo(controller);
+    }
     
     
     var controller = new ScrollMagic.Controller();
@@ -258,10 +273,20 @@
       //.add(TweenMax.to("path", 1, {stroke: "red", ease:Linear.easeNone}), 0);			// change color during the whole thing
     //tween.timeScale(0.1);
     // build scene
+    if(width>1800)
+    {
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 2600, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            // .addIndicators()
+            .addIndicators()
             .addTo(controller);
+    }
+    else if(width>1200)
+    {
+    var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 1800, tweenChanges: false}) //change duration to increase height of the scroll based animation
+            .setTween(tween)
+            .addIndicators()
+            .addTo(controller);
+    }
     var controller = new ScrollMagic.Controller();
 
     // build tween
@@ -272,15 +297,25 @@
       //.add(TweenMax.to("path", 1, {stroke: "red", ease:Linear.easeNone}), 0);			// change color during the whole thing
     //tween.timeScale(0.1);
     // build scene
+    if(width>1800)
+    {
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 2600, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            // .addIndicators()
+            .addIndicators()
             .addTo(controller);
+    }
+    else if(width>1200)
+    {
+    var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 1800, tweenChanges: false}) //change duration to increase height of the scroll based animation
+            .setTween(tween)
+            .addIndicators()
+            .addTo(controller);
+    }
     </script>
   </section>
 
   <div id="solidpepper">
-  <div id="pepperend" style="position: relative; top:7.5vh;"><h2><center>Pepper</center></h2>
+  <div id="pepperend"><h2><center>Pepper</center></h2>
   <p align="center"></br>We offer a platform to bring together the three parties together and see the magic happen!</p></div>  
   </div>
 
