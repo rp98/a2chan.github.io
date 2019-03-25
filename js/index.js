@@ -14,6 +14,7 @@ $(document).ready(function(){
   $("nav, .headertop").delay(7000).fadeTo(2000,1);
   $(".gettingStarted").delay(7000).fadeTo(3000,1);
   $("#autotext").delay(9400).fadeTo(1000,1);
+  $("#owlwrapper").delay(8000).fadeTo(1000,1);
   $("#pepperdesc, #gsbutton").delay(11400).fadeTo(1000,1);
   $(".container").hide(0).delay(9000).fadeTo(3000,1);
   $("#fallingLetters").delay(8000).fadeTo(2000,1);
