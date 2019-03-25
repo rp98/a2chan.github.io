@@ -4,6 +4,11 @@
   opacity: 0;
 }
 
+/* #bgimage{
+  background: #000;
+  background-image: url("img/trianglify12.png");
+  background-repeat: repeat-y;
+} */
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #ffe5ce;
@@ -283,7 +288,7 @@ main > div > span b {
 
 /* Nav bar */
 
-*,*:before,*:after {
+nav,*:before,*:after {
 	box-sizing: border-box;
 }
 
@@ -388,6 +393,10 @@ nav ul li div span{
   margin-top:0vh;
   overflow: hidden;
   display: flex;
+  position: relative;
+  top:0;
+  left:0;
+  z-index:1;
 }
 
 .carousel-wrap {
@@ -480,7 +489,7 @@ background:rgba(0,0,0,0);
 
 #line , #line1 , #line2{
 min-height:350%;
-z-index:-1;
+z-index:0;
 }
 
 
@@ -547,7 +556,7 @@ z-index:-1;
 }
 	#tabs:hover{
     /* add this class to whichever li to focus*/
-		border-bottom: 2px solid #162449;          /* adds underline to li*/
+		border-bottom: 2px solid white;          /* adds underline to li*/
 		margin-bottom: -12px;
     padding-bottom: 10.5px;
     text-decoration: none;
@@ -570,7 +579,7 @@ a{
 	display: inline-block;            /* to allign nav items horizontally */
 }
 .nav a,.navmobile a{
-	color: #162449;
+	color: white;
 }
 
 
@@ -913,7 +922,7 @@ figure.snip1174 {
   /* background-color: #1a1a1a; */
   color: #ffffff;
   text-align: left;
-  z-index: 0;
+  z-index: 1;
 }
 figure.snip1174 * {
   -webkit-box-sizing: border-box;
