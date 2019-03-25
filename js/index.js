@@ -10,12 +10,31 @@ $(document).ready(function(){
   // Now to start autoTyping just call the autoType function with the 
   // class of outer div
   // The second paramter is the speed between each letter is typed.   
-  $("nav").delay(700).show(2000);
-  $(".gettingStarted").delay(700).fadeTo(3000,1);
-  $("#autotype").delay(940).fadeTo(1000,1);
-  $(".container").hide(0).delay(900).fadeTo(3000,1);
-  $("#fallingLetters").delay(800).fadeTo(2000,1);
-
+  $("body").css({"overflow":"hidden"});
+  $("nav, .headertop").delay(7000).fadeTo(2000,1);
+  $(".gettingStarted").delay(7000).fadeTo(3000,1);
+  $("#autotext").delay(9400).fadeTo(1000,1);
+  $("#pepperdesc, #gsbutton").delay(11400).fadeTo(1000,1);
+  $(".container").hide(0).delay(9000).fadeTo(3000,1);
+  $("#fallingLetters").delay(8000).fadeTo(2000,1);
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 5
+      }
+    }
+  });
 
   // Top bar begins
   $(document).scroll(function(){
@@ -56,36 +75,6 @@ $(document).ready(function(){
 
   });
   
-  // Top bar ends
-
-  // Carousel begins
-  $('#customers-testimonials').owlCarousel( {
-    loop: true,
-    center: true,
-    items: 3,
-    margin: 30,
-    autoplay: true,
-    lazyLoad: true,
-    dots:false,
-    autoplayHoverPause:true,
-    nav:true,
-    autoplayTimeout: 4500,
-    smartSpeed: 450,
-    navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      1170: {
-        items: 3
-      }
-    }
-  });
-  // Carousel ends
-
   // Falling letters begins
   setTimeout(function(){
     autoType(".type-js",200);
@@ -97,8 +86,12 @@ $(document).ready(function(){
 // }, 5500);
 
 setTimeout(function(){
-  $("#inkpot").fadeOut(500);
-}, 500);
+  $("#inkpot").fadeOut(2500);
+}, 5500);
+
+setTimeout(function(){
+  $("body").css({"overflow":"visible"});
+}, 8000);
 
 setTimeout(function() {
   playGame();
