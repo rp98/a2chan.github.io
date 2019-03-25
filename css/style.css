@@ -389,7 +389,7 @@ nav ul li div span{
 /* Carousel */
 
 #owlwrapper{
-  background: #000;
+  /* background: #000; */
   width: 100vw;
   margin-top:0vh;
   overflow: hidden;
@@ -520,6 +520,9 @@ z-index:0;
 
 /* Trail ends */
 
+
+
+/* media responsive */
 @media screen and (max-width: 420px) {
   .headline {
     margin: 20px;
@@ -540,6 +543,59 @@ z-index:0;
     width: 90vw;
     right: -5vw;
   }
+  nav{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  #pepperwrapper .headline h1#autotext{
+        font-size:5em;
+        margin-left: 0.25em;
+  }
+  #autotextwrapper{
+    text-align: center;
+    margin-left: 0.25em;
+  }
+  svg#line, svg#line1, svg#line2{
+    display: none;
+  }
+  figure.snip1174 {
+    margin: 10px;
+    min-width: 220px;
+    min-height: 50vh;
+    max-width: 90vw !important;
+    width: 100%;
+  }
+
+  #bluetrail, #yellowtrail, #redtrail{
+    margin: auto;
+    width: 90vw !important;
+    margin-left: 3vw !important;
+    font-size: 0.8em;
+  }
+  #bluetrail img, #yellowtrail img, #redtrail img{
+    width: 80vw;
+    height: 45vh !important;
+    margin-left: 4vw;
+    /* margin-top: 5vh; */
+  }
+   #bluetrail{
+    /* max-height: 50vh; */
+    margin-top:10vh;
+    /* overflow: hidden; */
+   }
+
+  #yellowtrail{
+    /* max-height: 50vh; */
+    margin-top:20vh;
+    /* overflow: hidden; */
+   }
+  #redtrail{
+    /* max-height: 50vh; */
+    margin-top:30vh;
+    /* overflow: hidden; */
+   } 
+
 }
 
 /* Top bar */
@@ -650,7 +706,7 @@ a{
 		opacity: 1;
 	}
 	.mobilelogoinsidebar h1 {
-		margin: 0;
+		margin-left:0.1em ;
 	    font-weight: 700;
 	    text-shadow: 3px 2px 0px #fff;
 	    line-height: 0.87;
@@ -659,11 +715,13 @@ a{
 		color: white;
 	}
 	.mobilelogoinsidebar{
-		margin-top: 70px;
+    margin-top: 70px;
+    margin-left:0.1em ;
+	  
 	}
 	.mobilelogo{
 		font-size: 2em;
-		margin: 0;
+		margin: 0.1em;
 	    font-weight: 700;
 	    text-shadow: 3px 2px 0px #fff;
 	    line-height: 0.87;
@@ -728,7 +786,11 @@ a{
 
 /******************************** TABLETS *******************************/
 
-@media screen and (min-width: 481px) and (max-width: 768px){
+@media screen and (min-width: 481px) and (max-width: 767px){
+  svg#line, svg#line1, svg#line2{
+    display: none;
+  }
+  
 	.navmobile{
 		display: none;
 	}
@@ -787,7 +849,7 @@ a{
 }
 
 /******************************** DESKTOPS ******************************/
-@media screen and (min-width:769px ){
+@media screen and (min-width:768px ){
 
 	.navmobile{
 		display: none;
@@ -850,19 +912,19 @@ a{
 
 /* trail images */
 #bluetrail{
-  margin-left:70%;
+  margin-left:70vw;
   max-height: 50vh; 
   margin-top:10vh;
   /* overflow: hidden; */
 }
 #yellowtrail{
-  margin-left:40%;
+  margin-left:40vw;
   max-height: 50vh; 
   margin-top:20vh;
   /* overflow: hidden; */
 }
 #redtrail{
-  margin-left:10%;
+  margin-left:10vw;
   max-height: 50vh; 
   margin-top:20vh;
   /* overflow: hidden; */
