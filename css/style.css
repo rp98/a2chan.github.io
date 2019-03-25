@@ -204,6 +204,7 @@ body {
   position: relative;
   top:0;
   left:0;
+  z-index: 1000;
 }
 
 main {
@@ -396,8 +397,6 @@ nav ul li div span{
   left:0;    
 }
 
-.carousel-wrap h3{
-}
 
 .owl-carousel{
   position: relative;

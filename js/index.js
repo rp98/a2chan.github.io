@@ -16,7 +16,6 @@ $(document).ready(function(){
   $("#autotext").delay(9400).fadeTo(1000,1);
   $("#owlwrapper").delay(8000).fadeTo(1000,1);
   $("#pepperdesc, #gsbutton").delay(11400).fadeTo(1000,1);
-  $(".container").hide(0).delay(9000).fadeTo(3000,1);
   $("#fallingLetters").delay(8000).fadeTo(2000,1);
   $('.owl-carousel').owlCarousel({
     loop: true,
@@ -37,6 +36,11 @@ $(document).ready(function(){
     }
   });
 
+   // Falling letters begins
+   setTimeout(function(){
+    autoType(".type-js",200);
+  },8000);
+  
   // Top bar begins
   $(document).scroll(function(){
 		if( $(document).scrollTop() > 95 )
@@ -75,11 +79,6 @@ $(document).ready(function(){
 		}
 
   });
-  
-  // Falling letters begins
-  setTimeout(function(){
-    autoType(".type-js",200);
-  },8000);
 });
 
 // setTimeout(function(){
