@@ -130,6 +130,11 @@ body {
   -moz-transition:    0.08s ease-in;
   -webkit-transition: 0.08s ease-in;
   position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+.gettingStarted a {
+  color: black;
+  text-decoration: none;
 }
 
 .gettingStarted:hover {
@@ -459,29 +464,14 @@ nav ul li div span{
   overflow:hidden;
 }
 
-#line{
-  background: rgba(0,0,0,0);
-	position:absolute;
-	top:130vh;
-	left:7vw;
+#line , #line1 , #line2{
+  min-height:350%;
+  z-index:0;
+  left:4.8vw;
   width: 92vw;
-   /* margin: -75px 0 0 -75px; */
-   }
-#line1{
   background: rgba(0,0,0,0);
   position:absolute;
-	top:130vh;
-	left:7vw;
-  width: 92vw;
-   /* margin: -75px 0 0 -75px; */
-}
-#line2{
-  background: rgba(0,0,0,0);
-	position:absolute;
-	top: 130vh;
-	left:7vw;
-  width: 92vw;
-  /* margin: -75px 0 0 -75px; */
+  top:130vh;
 }
 
 .spacer{
@@ -932,6 +922,9 @@ a{
 
 #imgtag{
   background: #000;
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: 200;
+  font-size: 3.5em;
   position: absolute;
   bottom: -15%;
   left:5vw;
@@ -983,15 +976,18 @@ figure.snip1174 img {
 }
 figure.snip1174 figcaption {
   position: absolute;
-  padding: 40px 25px;
   top: 0;
   left: 0;
+  padding-top: 6em;
+  padding-left: 2em;
+  padding-right: 2em;
   }
 figure.snip1174 h2,
 figure.snip1174 p {
   margin: 0;
   padding: 0;
   opacity: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 figure.snip1174 h2 {
   margin-bottom: 10px;

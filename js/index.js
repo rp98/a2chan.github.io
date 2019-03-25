@@ -259,7 +259,9 @@ function autoType(elementClass, typingSpeed){
   });
   thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
   thhis = thhis.find(".text-js");
-  var text = thhis.text().trim().split('');
+  var dum="Pepper.";
+  var text = dum.trim().split('');
+  // var text = thhis.text().trim().split('');
   var amntOfChars = text.length;
   var newString = "";
   // thhis.text("|");

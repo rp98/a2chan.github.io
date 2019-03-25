@@ -43,10 +43,9 @@
         <div class="nav">
           <ul class="navlist">
             <li id="tabs"><a href="#" style="text-decoration: none">Home</a></li>
-            <li id="tabs"><a href="#" style="text-decoration: none">About</a></li>
-            <li id="tabs"><a href="#" style="text-decoration: none">Gallery</a></li>
-            <li id="tabs"><a href="#" style="text-decoration: none">Work</a></li>
-            <li id="tabs"><a href="#" style="padding-right: 0px; text-decoration: none;">Contact-us</a></li>
+            <li id="tabs"><a href="https://pepper.org.in/about/" target="_blank" style="text-decoration: none">About</a></li>
+            <li id="tabs"><a href="https://pepper.org.in/blog/" target="_blank" style="text-decoration: none">Blog</a></li>
+            <li id="tabs"><a href="#section-1" style="padding-right: 0px; text-decoration: none;">Contact us</a></li>
           </ul>
         </div>
       </div>
@@ -76,13 +75,13 @@
     <div id="autotextwrapper">
       <div id="pepperwrapper">
         <div class="type-js headline">
-          <h1 class="text-js" id="autotext" style="opacity: 0;">Pepper.</h1>
+          <h1 class="text-js" id="autotext" style="opacity: 0;"></h1>
         </div>
       </div>
       <h3 id="pepperdesc" style="opacity: 0;">One-stop destination for content creation.</h3>
       <!-- Get started button -->
       <div id="gsbutton" style="opacity: 0;">
-        <button class="gettingStarted" style="opacity:0;">Getting started</button>
+        <button class="gettingStarted" style="opacity:0;"><a href="https://pepper.org.in/portal/" target="_blank">Getting started</a></button>
       </div>
       <!-- Get started end --> 
     </div>
@@ -98,7 +97,7 @@
   <!-- Carousel -->
   <div id="owlwrapper" style="opacity: 0; background-image: url('img/orangewall.jpg'); background-size: contain; background-repeat:repeat-x" >
     <div class="carousel-wrap">
-      <h3 style="color:white">Our partners in crime, literally</h3>
+      <h3 style="color:white">Clients we've worked with</h3>
       <div id="trigger1" class="spacer s0"></div>
       <div class="owl-carousel">
         <div class="item"><img src="img/digit.png"></div>
@@ -154,43 +153,44 @@
     <div class="spacer s2"></div>
     <div id="bluetrail">
       <figure class="snip1174 blue">
-        <img src="img/trail01.jpg" alt="Client"/>
+        <img src="img/trail01.jpg" alt="Businesses"/>
+        <center>
         <figcaption> 
-          <h2>Desmond Eagle</h2>
-        
           <p>
-            If you do the job badly enough, sometimes you don't get asked to do it again. 
+            Over 80% of the businesses can't formalise the way content is produced. 
           </p>
-          <a href="#">Get in Touch</a>
-          
+          <a href="https://pepper.org.in/business/">Get in Touch</a>
         </figcaption>
-        <div id="imgtag"> <h>Writer</h></div>
+        </center>
+        <div id="imgtag"> <h>Client</h></div>
       </figure>
     </div>
     <div id="yellowtrail">
         <figure class="snip1174 yellow">
-          <img src="img/trail02.jpg" alt="sq-sample35"/>
+          <img src="img/trail02.jpg" alt="Client"/>
+          <center>
             <figcaption>
-              <h2>Gordon Norman</h2>
               <p>
-                I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway.
+                There exists a large of pool of content creators. The scope of work in this space is immense. 
               </p>
-              <a href="#">Join Today</a>
+              <a href="https://pepper.org.in/writers/">Join Today</a>
             </figcaption>
-            <div id="imgtag"> <h>Client</h></div>
+            </center>
+            <div id="imgtag"> <h>Writer</h></div>
         </figure>
       </div>
 
       <div id="redtrail">
         <figure class="snip1174 red">
           <img src="img/trail03.png" alt="sq-sample33"/>
+          <center>
           <figcaption>
-            <h2>Ingredia Nutrisha</h2>
             <p>
-              Sometimes one should just look at things and think about things without doing things.
+              Every content piece needs a thorough vetting for quality.
             </p>
-            <a href="#">Read More</a>
+            <a href="https://pepper.org.in/writers/">Read More</a>
           </figcaption>
+          </center>
           <div id="imgtag"> <h>Editor</h></div>
         </figure>
       </div>
@@ -207,7 +207,9 @@
     <path id="wordy3" style="stroke-linecap: round; stroke-linejoin: round; opacity: 0.8" fill="none" stroke="#AD333E" stroke-width="80" d="M 125 1200 L 950 1200 C 975 1200 1000 1225 1000 1250 L 1000 1500 C 1000 1525 975 1550 950 1550 L 800 1550 C 775 1550 750 1575 750 1600 L 750 1850"></path>
     </svg>
 
+    <div id="1920x1080">
     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+    </div>
 
     <div class="spacer s2"></div>
   </div>
@@ -243,7 +245,7 @@
     // build scene
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 2600, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     
     
@@ -258,7 +260,7 @@
     // build scene
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 2600, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     var controller = new ScrollMagic.Controller();
 
@@ -272,14 +274,14 @@
     // build scene
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 2600, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     </script>
   </section>
 
   <div id="solidpepper">
-  <div id="pepperend"><h2><center>Pepper</center></h2>
-  <p>We are amazing.We are awesome</p></div>  
+  <div id="pepperend" style="position: relative; top:7.5vh;"><h2><center>Pepper</center></h2>
+  <p align="center"></br>We offer a platform to bring together the three parties together and see the magic happen!</p></div>  
   </div>
 
   </div>
@@ -302,50 +304,25 @@
 
 <!-- footer begins -->
  
-<div class="section-1">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <h3>SUPPORT ME</h3>
-          <P>Thank you for your support, simply dummy text of the printing and typesetting industry. Lorem Ipsum has been t </P>
-          <button class="btn btn-lg"><i>Donate via PayPal</i></button>
+<div class="section-1" style="width:100vw">
+    <div class="container" style="width:100vw">
+      <div class="row" style="width:80vw; margin-left:auto; margin-right:auto">
+        <div class="col-sm-6">
+          <h3>We are at:</h3>
+          <P>FD1, BITS Pilani, Vidya Vihar, Pilani, Jhunjhunu, Rajasthan - 333031.</P>
         </div>
-        <div class="col-sm-3">
-          <h3>CONTACT ME</h3>
-          <P>Email: info@eWebDesigns.com.au </P>
-  
-          <p>Facebook: @eWebDesigns</p>
+        <div class="col-sm-6" align="right">
+          <h3>CONTACT US</h3>
+          <P>Email: anirudh@pepper.org.in</P>
+          <p>Mob: +91-9818536680</p>
           <h3>SOCIAL MEDIA</h3>
           <i class="fa fa-facebook"></i>
-          <i class="fa fa-google"></i>
+          <i class="fa fa-linkedin"></i>
           <i class="fa fa-twitter"></i>
-        </div>
-        <div class="col-sm-3">
-          <h3>TECHNOLOGIES</h3>
-          <ul>
-            <li>Angular</li>
-            <li>Node js</li>
-            <li>WordPress</li>
-            <li>JavaScript</li>
-            <li>Html 5</li>
-            <li>CSS 3</li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>PROJECTS</h3>
-          <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-            <li>Project 4</li>
-            <li>Project 5</li>
-            <li>Project 6</li>
-          </ul>
-        </div>
-        
+        </div>        
       </div>
       <br>
-        <p align="center"> © eWebDesigns.</p>
+        <p align="center"> © 2019, Pepper. All Rights Reserved.</p>
     </div>
   </div>
 
