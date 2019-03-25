@@ -867,20 +867,8 @@ a{
   margin-top:20vh;
   /* overflow: hidden; */
 }
-#writer{
-  background: #000;
-  position: absolute;
-  bottom: -15%;
-  left: -20%;
-  z-index: 10;
-  min-height: 12vh;
-  min-width: 15vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity:0.8;
-}
-#client{
+
+#imgtag{
   background: #000;
   position: absolute;
   bottom: -15%;
@@ -893,19 +881,7 @@ a{
   align-items: center;
   opacity: 0.8;
 }
-#editor{
-  background: #000;
-  position: absolute;
-  bottom: -15%;
-  right:-20%;
-  z-index: 10;
-  min-height: 12vh;
-  min-width: 15vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.8;
-}
+
 
 figure.snip1174 {
   font-family: 'Raleway', Arial, sans-serif;
