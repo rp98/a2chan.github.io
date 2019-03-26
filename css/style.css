@@ -20,6 +20,7 @@ body {
   opacity: 0.9;
   max-width: 100vw;
   overflow-x: hidden !important;
+  text-decoration: none;
 }
 
 
@@ -994,6 +995,12 @@ figure.snip1174 {
   opacity: 0.8;
 }
 
+#imgtag a{
+  width:100%;
+  height:100%;
+  padding: 40px 40px;
+}
+
 
 figure.snip1174 {
   font-family: 'Raleway', Arial, sans-serif;
@@ -1121,7 +1128,7 @@ figure.snip1174.hover h2 {
 
 /* footer */
 
-.section-1 {
+#section-1 {
   background-color: #243138;
   height: 300px;
   padding-top: 50px;
@@ -1133,15 +1140,15 @@ figure.snip1174.hover h2 {
   left:0;
   z-index: 3;
 }
-.section-1 h3 {
+#section-1 h3 {
   font-size: 14px;
   font-weight: 400;
 }
-.section-1 p, .section-1 li {
+#section-1 p, #section-1 li {
   font-size: 12px;
   font-weight: 300;
 }
-.section-1 .fa {
+#section-1 .fa {
   font-size: 16px;
   display: inline-block;
   background: #fff;
@@ -1152,23 +1159,23 @@ figure.snip1174.hover h2 {
   color: #000;
   cursor: pointer;
 }
-.section-1 .fa-twitter {
+#section-1 .fa-twitter {
   color: #4eb0fa;
 }
-.section-1 .fa-google {
+#section-1 .fa-google {
   color: #ff2a13;
 }
-.section-1 .fa-facebook {
+#section-1 .fa-facebook {
   color: #1361ab;
 }
-.section-1 .btn {
+#section-1 .btn {
   background: #ffbf00;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fd0), color-stop(1, #ff8e00));
   border: none;
   padding: 6px 20px;
   font-style: italic;
 }
-.section-1 .btn {
+#section-1 .btn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: 400;
@@ -1190,7 +1197,7 @@ figure.snip1174.hover h2 {
 }
 
 @media screen and (max-width: 699px) and (min-width: 320px) {
-  .section-1 {
+  #section-1 {
     height: 100%;
   }
 
