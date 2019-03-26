@@ -510,10 +510,6 @@ nav ul li div span{
 /* media responsive */
 @media screen and (max-width: 420px) {
 
-  
-  #breakline1920,#breakline1366{
-    display: none;
-  }
   .headline {
     margin: 20px;
     margin-bottom: 30%;
@@ -527,6 +523,7 @@ nav ul li div span{
     width: 90vw;
     right: -5vw;
   }
+
   nav{
     height: 0;
     width: 0;
@@ -540,6 +537,31 @@ nav ul li div span{
     text-align: center;
     margin-left: 0.25em;
   }
+
+  .demo{
+    max-height: 225vh !important;
+  }
+
+  #imgtag{
+    font-size:1.5em !important;
+    min-width: 25vw !important;
+  }
+
+  #pepperend{
+    margin-right: 10%;
+    margin-left: 10%;
+    position: relative; 
+  }
+
+  h2{
+    color: white;
+    font-size: 3em !important;
+  }
+  p{
+    color: white;
+    font-size: 1em !important;
+  }
+  
   svg#line, svg#line1, svg#line2{
     display: none;
   }
@@ -839,6 +861,15 @@ nav ul li:after {
 	transition:all .4s ease-out;
 }
 
+.demo{
+    max-height: 225vh !important;
+}
+
+#imgtag{
+  font-size:2.5em !important;
+  min-width: 25vw !important;
+}
+
 figure.snip1174 {
   margin: 10px;
   min-width: 220px;
@@ -858,11 +889,6 @@ figure.snip1174 {
   height: 45vh !important;
   margin-left: 4vw;
   /* margin-top: 5vh; */
-}
-
-
-#breakline1920,#breakline1366{
-  display: none;
 }
 
 }
@@ -947,7 +973,7 @@ figure.snip1174 {
 #redtrail{
   margin-left:10vw;
   max-height: 50vh; 
-  margin-top:30vh;
+  margin-top:20vh;
   /* overflow: hidden; */
 }
 
@@ -973,6 +999,9 @@ figure.snip1174 {
   font-family: 'Raleway', Arial, sans-serif;
   /* color: #fff; */
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top:0;
   left:0;
   /* overflow: hidden; */
@@ -1007,6 +1036,7 @@ figure.snip1174 img {
 }
 figure.snip1174 figcaption {
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   padding-top: 6em;
@@ -1174,22 +1204,14 @@ figure.snip1174.hover h2 {
   background-color: #f9d016;
   z-index:0;
   min-height: 35vh;
-  padding-bottom:10%;
-  display: block;
+  display: flex;
+  justify-content: center;
   align-items:center;
 }
 #pepperend{
-  margin: 0;
-  position: relative;
-  /* -ms-transform: translateY(-50%); */
-  /* transform: translateY(-50%); */
-  /* left:50%; */
-  /* -ms-transform: translateX(-50%);
-  transform: translateX(-50%); */
-  /* top:50%;
-  -ms-transform: translateY(50%); */
-  transform: translateY(50%);
-  
+  margin-right: 10%;
+  margin-left: 10%;
+  position: relative; 
 }
 
 h2{
