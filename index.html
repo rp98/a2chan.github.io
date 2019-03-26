@@ -34,17 +34,20 @@
   
 </head>
 
-<body background="img/trianglify12.png" style="background-repeat: no-repeat;">
+<<body background="img/trianglify12.png" style="background-repeat: no-repeat;">
 
 
 
-    <!-- Falling letters begin -->
-    <div id='fallingLetters' style="opacity:0;">
-      <main id="main"></main>
+  <!-- Falling letters begin -->
+  <div id='fallingLetters' style="opacity:0;">
+    <main id="main"></main>
   </div>
   <!-- Falling letters end -->
+
   <!-- Autotype begins -->
   <div id='autotype'>
+
+    <!-- Top bar begins -->
     <div class="headertop" style="opacity: 0;">
       <div class="navwrapper" style="width: 60vw; margin-left:20vw; margin-right:20vw; border-bottom: 1.5px solid white">
         <div class="nav">
@@ -79,6 +82,7 @@
     </div>
     <!-- Top Bar ends -->
 
+    <!-- Center text begins -->
     <div id="autotextwrapper">
       <div id="pepperwrapper">
         <div class="type-js headline">
@@ -110,11 +114,10 @@
       </div>
     </div>
   </div>
+  <!-- Carousel ends -->
 
-    <!-- Carousel ends -->
-
-  <div id="bgimage" style="background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)),url('img/slash.jpg'); background-repeat:repeat;background-size: contain">
-    
+  <!-- <div id="bgimage" style="background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)),url('img/slash.jpg'); background-repeat:repeat;background-size: contain"> -->
+    <div id="bgimage">
     <!-- <img src="img/wall.jpg" style="position:relative; top:0; left:0; z-index: -2; background-repeat:repeat-y;"> -->
 
   <!-- Side bar begins --> 
@@ -149,11 +152,6 @@
 <!-- Trail Lines -->
 
 <section class="demo">
-  
-  <div class="whole">
-   
-    </br>
-    <div class="spacer s2"></div>
     <div id="bluetrail">
       <figure class="snip1174 blue">
         <img src="img/trail01.jpg" alt="Businesses"/>
@@ -185,7 +183,7 @@
 
       <div id="redtrail">
         <figure class="snip1174 red">
-          <img src="img/trail03.png" alt="sq-sample33"/>
+          <img src="img/trail03.png" alt="Editor"/>
           <center>
           <figcaption>
             <p>
@@ -210,14 +208,14 @@
     <path id="wordy3" style="stroke-linecap: round; stroke-linejoin: round; opacity: 0.8" fill="none" stroke="#AD333E" stroke-width="80" d="M 125 1200 L 950 1200 C 975 1200 1000 1225 1000 1250 L 1000 1500 C 1000 1525 975 1550 950 1550 L 800 1550 C 775 1550 750 1575 750 1600 L 750 1850"></path>
     </svg>
 
-    <div id="breakline1920">
+    <!-- <div id="breakline1920">
     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
     </div>
     <div id="breakline1366"></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
     </div>
-    <div id="breakline420"></br></br></div>
+    <div id="breakline420"></br></br></div> -->
     <div class="spacer s2"></div>
-  </div>
+  
   
   <script>
     function pathPrepare ($el) {
@@ -252,14 +250,14 @@
     {
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 2600, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     }
     else if(width>1200)
     {
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 1800, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     }
     
@@ -277,14 +275,14 @@
     {
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 2600, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     }
     else if(width>1200)
     {
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 1800, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     }
     var controller = new ScrollMagic.Controller();
@@ -301,14 +299,14 @@
     {
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 2600, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     }
     else if(width>1200)
     {
     var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 1800, tweenChanges: false}) //change duration to increase height of the scroll based animation
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     }
     </script>
