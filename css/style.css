@@ -711,10 +711,11 @@ a{
 		opacity: 1;
 	}
 	.mobilelogoinsidebar h1 {
-		margin-left:0.1em ;
-	    font-weight: 700;
-	    text-shadow: 3px 2px 0px #fff;
-	    line-height: 0.87;
+    margin-left:0.1em ;
+    font-family:'Special Elite', cursive;
+	  font-weight: 700;
+	  /* text-shadow: 3px 2px 0px #fff; */
+	  line-height: 0.87;
 	}
 	.mobilelogoinsidebar a{
 		color: white;
