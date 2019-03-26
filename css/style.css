@@ -1128,7 +1128,7 @@ figure.snip1174.hover h2 {
   color: #fff;
   letter-spacing: 1.5px;
   width:100vw;
-  z-index: 1;
+  z-index: 3;
 }
 .section-1 h3 {
   font-size: 14px;
