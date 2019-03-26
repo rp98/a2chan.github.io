@@ -582,45 +582,7 @@ nav ul li div span{
 
   
   }
-  @media screen and (min-width: 1200px) and (max-width: 1400px){
-
-  #line1,#line,#line2{
-    top:142vh!important;
-  }
-  #breakline1920{
-    display: none!important;
-  }
-  #solidpepper{
-    min-height: 45vh!important;
-    /* padding-bottom:0%; */
-   
-  }
-  #pepperend{
-    top: 10%!important;
-    /* bottom: 50%; */
-    /* -ms-transform: translateY(-50%); */
-    /* transform: translateY(-50%); */
-    left:50%;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    
-  }
-}
-@media screen and (min-width: 1800px) {
-
-  /* #line1,#line,#line2{ */
-    /* top:142vh!important; */
-  /* } */
-  #breakline1366,#breakline420{
-    display: none!important;
-  }
-  #pepperend{
-    position: relative; 
-    top:0;
-    left:0;
-  }
   
-}
 /* Top bar */
 
 
