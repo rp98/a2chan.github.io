@@ -29,7 +29,7 @@ $(document).ready(function(){
     autoplayHoverPause: true,
     responsive: {
       0: {
-        items: 1
+        items: 2
       },
       600: {
         items: 3
